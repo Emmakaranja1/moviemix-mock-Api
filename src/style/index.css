@@ -46,7 +46,7 @@ a:focus {
 }
 
 .navbar {
-  background: linear-gradient(90deg, #646cff, #535bf2);
+  background: linear-gradient(90deg, #9506e7, #750697);
   padding: 1rem 2rem;
   display: flex;
   justify-content: center;
@@ -136,7 +136,7 @@ h2 {
 @media (prefers-color-scheme: light) {
   :root {
     --color-background-dark: #f9f9f9;
-    --color-text-light: #213547;
+    --color-text-light: #16d465;
     --color-primary: #535bf2;
     --color-primary-hover: #646cff;
   }
@@ -152,7 +152,7 @@ h2 {
   }
 
   input, select, textarea {
-    background-color: #fff;
+    background-color: #9c0909;
     color: var(--color-text-light);
     border: 1px solid #ccc;
   }
