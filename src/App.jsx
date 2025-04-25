@@ -1,10 +1,9 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import "./style/index.css";
-import Profile from "./Profile.jsx";
-import Login from "./Login.jsx";
-import Signup from "./Signup.jsx";
-import Homepage from "./components/Homepage.jsx";
-import Navbar from "./components/Navbar.jsx";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import './App.css'
+import Profile from './Profile.jsx'
+import Login from './Login.jsx'
+import Signup from './Signup.jsx'
+
 function App() {
   const appStyle = {
     position: "relative",
