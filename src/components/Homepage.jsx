@@ -1,10 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "../style/Homepage.css";
 
-<<<<<<< HEAD:src/components/Navbar/Homepage.jsx
-function Homepage () {
-  return <div></div>;
-=======
+
 const Homepage = () => {
   const [movies, setMovies] = useState([]);
   const [error, setError] = useState(null);
@@ -12,7 +9,7 @@ const Homepage = () => {
   useEffect(() => {
     const fetchMovies = async () => {
       try {
-        const response = await fetch("http://localhost:3001/movies");
+        const response = await fetch("http://localhost:3002/movies");
         if (!response.ok) {
           throw new Error("Network response was not ok");
         }
@@ -41,7 +38,7 @@ const Homepage = () => {
       </div>
     </div>
   );
->>>>>>> 94a4acf2d8e61f52bba7fdeebafd7e30e338d87e:src/components/Homepage.jsx
+
 };
 
 export default Homepage;

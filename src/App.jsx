@@ -13,6 +13,7 @@ import RatedFiveStars from './components/RatedFiveStars';
 
 
 
+
 function App() {
   const appStyle = {
     position: "relative",
@@ -32,11 +33,11 @@ function App() {
           <Route path="/profile" element={<Profile />} />
 
           <Route path="/login" element={<Login />} />
-          <Route path ="/profile" element={<Profile/>} />
+          
           <Route path="/signup" element={<Signup />} />
 
 
-          <Route path="/Homepage" element={<Homepage />} />
+          <Route path="/homepage" element={<Homepage />} />
           <Route path="/all-movies" element={<AllMovies />} />
           <Route path="/watchlist" element={<Watchlist />} />
           <Route path="/rated-5-stars" element={<RatedFiveStars />} />
