@@ -15,10 +15,13 @@ function App() {
       <div className="app-container">
         <Navbar />
         <Routes>
+          <Route path="/" element={<Homepage />} />{" "}
+          {/* Add this line for the root path */}
           <Route path="/profile" element={<Profile />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
-          <Route path="/Homepage" element={<Homepage />} />
+          <Route path="/Homepage" element={<Homepage />} />{" "}
+          {/* You can keep this for backward compatibility */}
           <Route path="/all-movies" element={<AllMovies />} />
           <Route path="/watchlist" element={<Watchlist />} />
           <Route path="/rated-5-stars" element={<RatedFiveStars />} />
