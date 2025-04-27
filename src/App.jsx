@@ -1,28 +1,23 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
-import Profile from "./Profile.jsx";
 import Login from "./Login.jsx";
 import Signup from "./Signup.jsx";
-import Homepage from "./components/Homepage.jsx";
+import Profile from "./Profile.jsx";
 import Navbar from "./components/Navbar.jsx";
+import Homepage from "./components/Homepage.jsx";
+import Moviedetails from "./components/Moviedetails.jsx";
 
 function App() {
-  const appStyle = {
-    position: "relative",
-    minHeight: "100vh",
-    padding: "2rem",
-  };
-
   return (
     <Router>
-      <div style={appStyle}>
+      <div className="app-container">
         <Navbar />
-        <h1>Welcome to Movie Mix</h1>
         <Routes>
-          <Route path="/" element={<Profile />} />
+          <Route path="/" element={<Homepage />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
-          <Route path="/Homepage" element={<Homepage />} />
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/movie/:id" element={<Moviedetails />} />
         </Routes>
       </div>
     </Router>
