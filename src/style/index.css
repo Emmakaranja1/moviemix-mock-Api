@@ -157,3 +157,115 @@ h2 {
     border: 1px solid #ccc;
   }
 }
+
+
+.movies-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.movie-item {
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.movie-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.movie-image {
+  width: 50%;
+  height: 400px;
+  object-fit: cover;
+}
+
+.movie-details {
+  padding: 1rem;
+  text-align: center;
+}
+
+.movie-details h2 {
+  font-size: 1.5rem;
+  color:red;
+  margin-bottom: 0.5rem;
+}
+
+.movie-details p {
+  font-size: 1rem;
+  color: #666;
+  margin: 0.25rem 0;
+}
+
+
+
+
+
+.watchlist-movie-image {
+  width: 20%;
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 1px solid #ddd;
+}
+
+
+.delete-button {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 1rem;
+}
+
+.delete-button:hover {
+  background-color: #c0392b;
+
+}
+.rating-buttons button {
+  background-color: #f1c40f;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 0.5rem;
+  margin: 0.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.rating-buttons button:hover {
+  background-color: #d4ac0d;
+
+}
+.rating-buttons {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.star-button {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: black;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.star-button.selected {
+  color: white;
+}
+
+.star-button:hover {
+  transform: scale(1.2);
+}
+
