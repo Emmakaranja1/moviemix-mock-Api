@@ -9,62 +9,6 @@
       "rating": 5
     },
     {
-      "id": "2",
-      "title": "Interstellar",
-      "genre": "Sci-Fi",
-      "releaseYear": "2014",
-      "image": "https://image.tmdb.org/t/p/w500/gEU2QniE6E77NI6lCU6MxlNBvIx.jpg",
-      "rating": 5
-    },
-    {
-      "id": "3",
-      "title": "Dune: Part Two",
-      "genre": "Sci-Fi",
-      "releaseYear": "2024",
-      "image": "https://image.tmdb.org/t/p/w500/8b8R8l88Qje9dn9OE8PY05Nxl1X.jpg",
-      "rating": 5
-    },
-    {
-      "id": "4",
-      "title": "Oppenheimer",
-      "genre": "Biography",
-      "releaseYear": "2023",
-      "image": "https://image.tmdb.org/t/p/w500/8Gxv8gSFCU0XGDykEGv7zR1n2ua.jpg",
-      "rating": 5
-    },
-    {
-      "id": "5",
-      "title": "Avatar: The Way of Water",
-      "genre": "Fantasy",
-      "releaseYear": "2022",
-      "image": "https://image.tmdb.org/t/p/w500/t6HIqrRAclMCA60NsSmeqe9RmNV.jpg",
-      "rating": 5
-    },
-    {
-      "id": "6",
-      "title": "Joker",
-      "genre": "Drama",
-      "releaseYear": "2019",
-      "image": "https://image.tmdb.org/t/p/w500/udDclJoHjfjb8Ekgsd4FDteOkCU.jpg",
-      "rating": 5
-    },
-    {
-      "id": "7",
-      "title": "The Batman",
-      "genre": "Action",
-      "releaseYear": "2022",
-      "image": "https://image.tmdb.org/t/p/w500/74xTEgt7R36Fpooo50r9T25onhq.jpg",
-      "rating": 5
-    },
-    {
-      "id": "8",
-      "title": "Spider-Man: No Way Home",
-      "genre": "Action",
-      "releaseYear": "2021",
-      "image": "https://image.tmdb.org/t/p/w500/1g0dhYtq4irTY1GPXvft6k4YLjm.jpg",
-      "rating": 5
-    },
-    {
       "id": "9",
       "title": "Black Panther: Wakanda Forever",
       "genre": "Action",
@@ -241,11 +185,83 @@
       "rating": 5
     },
     {
+      "id": "31",
+      "title": "Shazam! Fury of the Gods",
+      "genre": "Superhero",
+      "releaseYear": "2023",
+      "image": "https://image.tmdb.org/t/p/w500/3GrRgt6CiLIUXUtoktcv1g2iwT5.jpg",
+      "rating": 5
+    },
+    {
+      "id": "32",
+      "title": "Creed III",
+      "genre": "Drama",
+      "releaseYear": "2023",
+      "image": "https://image.tmdb.org/t/p/w500/cvsXj3I9Q2iyyIo95AecSd1tad7.jpg",
+      "rating": 5
+    },
+    {
+      "id": "33",
+      "title": "The Whale",
+      "genre": "Drama",
+      "releaseYear": "2022",
+      "image": "https://image.tmdb.org/t/p/w500/keWxYhIBV6k2xQX8r9Xkz0jU289.jpg",
+      "rating": 5
+    },
+    {
       "id": "34",
-      "title": "The Beekeeper",
+      "title": "The Fabelmans",
+      "genre": "Drama",
+      "releaseYear": "2022",
+      "image": "https://image.tmdb.org/t/p/w500/d2IywyOPS78vEnJvwVqkVRTiNC1.jpg",
+      "rating": 5
+    },
+    {
+      "id": "35",
+      "title": "Everything Everywhere All at Once",
+      "genre": "Adventure",
+      "releaseYear": "2022",
+      "image": "https://image.tmdb.org/t/p/w500/w3LxiVYdWWRvEVdn5RYq6jIqkb1.jpg",
+      "rating": 5
+    },
+    {
+      "id": "36",
+      "title": "Top Gun: Maverick",
       "genre": "Action",
-      "releaseYear": "2024",
-      "image": "https://image.tmdb.org/t/p/w500/A7EByudX0eOzlkQ2FIbogzyazm2.jpg",
+      "releaseYear": "2022",
+      "image": "https://image.tmdb.org/t/p/w500/62HCnUTziyWcpDaBO2i1DX17ljH.jpg",
+      "rating": 5
+    },
+    {
+      "id": "37",
+      "title": "Nope",
+      "genre": "Horror",
+      "releaseYear": "2022",
+      "image": "https://image.tmdb.org/t/p/w500/AcKVlWaNVVVFQwro3nLXqPljcYA.jpg",
+      "rating": 5
+    },
+    {
+      "id": "38",
+      "title": "The Menu",
+      "genre": "Thriller",
+      "releaseYear": "2022",
+      "image": "https://image.tmdb.org/t/p/w500/fPtUgMcLIboqlTlPrq0bQpKK8eq.jpg",
+      "rating": 5
+    },
+    {
+      "id": "39",
+      "title": "The Banshees of Inisherin",
+      "genre": "Drama",
+      "releaseYear": "2022",
+      "image": "https://image.tmdb.org/t/p/w500/4yFG6cSPaCaPhyJ1vtGOtMD1lgh.jpg",
+      "rating": 5
+    },
+    {
+      "id": "40",
+      "title": "Glass Onion: A Knives Out Mystery",
+      "genre": "Mystery",
+      "releaseYear": "2022",
+      "image": "https://image.tmdb.org/t/p/w500/vDGr1YdrlfbU9wxTOdpf3zChmv9.jpg",
       "rating": 5
     }
   ],
@@ -264,7 +280,7 @@
   "watchlist": [
     {
       "id": "2da5",
-      "title": "coco",
+      "title": "Coco",
       "genre": "Animation",
       "releaseYear": "2024",
       "image": "https://image.tmdb.org/t/p/w500/gGEsBPAijhVUFoiNpgZXqRVWJt2.jpg"
@@ -278,5 +294,33 @@
       "rating": 5
     }
   ],
-  "ratedFiveStars": []
+  "ratedFiveStars": [
+    {
+      "id": "39",
+      "title": "The Banshees of Inisherin",
+      "genre": "Drama",
+      "releaseYear": "2022",
+      "image": "https://image.tmdb.org/t/p/w500/4yFG6cSPaCaPhyJ1vtGOtMD1lgh.jpg",
+      "rating": 5,
+      "userRating": 5
+    },
+    {
+      "id": "39",
+      "title": "The Banshees of Inisherin",
+      "genre": "Drama",
+      "releaseYear": "2022",
+      "image": "https://image.tmdb.org/t/p/w500/4yFG6cSPaCaPhyJ1vtGOtMD1lgh.jpg",
+      "rating": 5,
+      "userRating": 5
+    },
+    {
+      "id": "40",
+      "title": "Glass Onion: A Knives Out Mystery",
+      "genre": "Mystery",
+      "releaseYear": "2022",
+      "image": "https://image.tmdb.org/t/p/w500/vDGr1YdrlfbU9wxTOdpf3zChmv9.jpg",
+      "rating": 5,
+      "userRating": 5
+    }
+  ]
 }

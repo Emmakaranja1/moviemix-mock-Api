@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
-import { Link, useNavigate } from "react-router-dom";
 import "../style/AllMovies.css";
 
 const AllMovies = () => {
   const [movies, setMovies] = useState([]);
+  const [watchlist, setWatchlist] = useState([]);
+  const [ratedMovies, setRatedMovies] = useState([]);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(true);
-  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchAllMovies = async () => {
@@ -27,42 +27,56 @@ const AllMovies = () => {
     fetchAllMovies();
   }, []);
 
+  // Add a movie to the watchlist
+  const addToWatchlist = (movie) => {
+    if (!watchlist.some((item) => item.id === movie.id)) {
+      setWatchlist([...watchlist, movie]);
+    }
+  };
+
+  // Rate a movie and send it to the rated movies list
+  const rateMovie = async (movie, rating) => {
+    const ratedMovie = { ...movie, userRating: rating };
+    try {
+      await fetch("http://localhost:3001/ratedFiveStars", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(ratedMovie),
+      });
+      setRatedMovies([...ratedMovies, ratedMovie]);
+    } catch (error) {
+      console.error("Failed to rate movie:", error);
+    }
+  };
+
   if (loading) {
     return <div className="loading-container">Loading...</div>;
   }
 
   return (
     <div className="all-movies">
-      <div className="page-header">
-        <button className="back-button" onClick={() => navigate(-1)}>
-          ← Back
-        </button>
-        <h1>All Movies</h1>
-      </div>
-
+      <h1>All Movies</h1>
       {error && <p className="error">Error: {error.message}</p>}
-      {movies.length === 0 && !error && <p>No movies available.</p>}
       <div className="movie-list">
         {movies.map((movie) => (
-          <Link to={`/movie/${movie.id}`} key={movie.id} className="movie-card">
-            {movie.image && (
-              <div className="movie-image">
-                <img src={movie.image} alt={movie.title} />
-              </div>
-            )}
+          <div key={movie.id} className="movie-card">
+            <div className="movie-image">
+              <img src={movie.image} alt={movie.title} />
+            </div>
             <div className="movie-info">
               <h2>{movie.title}</h2>
-              <p>
-                <span>Genre:</span> {movie.genre}
-              </p>
-              <p>
-                <span>Rating:</span> {movie.rating}/10
-              </p>
-              <p>
-                <span>Year:</span> {movie.releaseYear}
-              </p>
+              <button onClick={() => addToWatchlist(movie)}>
+                Add to Watchlist
+              </button>
+              <div className="rating-buttons">
+                {[1, 2, 3, 4, 5].map((rating) => (
+                  <button key={rating} onClick={() => rateMovie(movie, rating)}>
+                    {rating} ★
+                  </button>
+                ))}
+              </div>
             </div>
-          </Link>
+          </div>
         ))}
       </div>
     </div>

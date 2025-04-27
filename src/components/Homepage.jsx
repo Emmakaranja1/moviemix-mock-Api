@@ -33,8 +33,6 @@ const Homepage = () => {
   return (
     <div className="homepage">
       <h1>Movie Mix</h1>
-
-      {/* Navigation links moved from navbar to homepage */}
       <div className="homepage-nav">
         <Link to="/watchlist" className="nav-link">
           Watchlist
@@ -46,28 +44,18 @@ const Homepage = () => {
           Rated Five Star
         </Link>
       </div>
-
       {error && <p className="error">Error: {error.message}</p>}
-      {movies.length === 0 && !error && <p>No movies available.</p>}
       <div className="movie-list">
         {movies.map((movie) => (
           <Link to={`/movie/${movie.id}`} key={movie.id} className="movie-card">
-            {movie.image && (
-              <div className="movie-image">
-                <img src={movie.image} alt={movie.title} />
-              </div>
-            )}
+            <div className="movie-image">
+              <img src={movie.image} alt={movie.title} />
+            </div>
             <div className="movie-info">
               <h2>{movie.title}</h2>
-              <p>
-                <span>Genre:</span> {movie.genre}
-              </p>
-              <p>
-                <span>Rating:</span> {movie.rating}/10
-              </p>
-              <p>
-                <span>Year:</span> {movie.releaseYear}
-              </p>
+              <p>Genre: {movie.genre}</p>
+              <p>Rating: {movie.rating}/10</p>
+              <p>Year: {movie.releaseYear}</p>
             </div>
           </Link>
         ))}
