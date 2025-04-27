@@ -52,16 +52,23 @@ const Homepage = () => {
       <div className="movie-list">
         {movies.map((movie) => (
           <Link to={`/movie/${movie.id}`} key={movie.id} className="movie-card">
-            <h2>{movie.title}</h2>
-            <p>
-              <span>Genre:</span> {movie.genre}
-            </p>
-            <p>
-              <span>Rating:</span> {movie.rating}/10
-            </p>
-            <p>
-              <span>Year:</span> {movie.releaseYear}
-            </p>
+            {movie.image && (
+              <div className="movie-image">
+                <img src={movie.image} alt={movie.title} />
+              </div>
+            )}
+            <div className="movie-info">
+              <h2>{movie.title}</h2>
+              <p>
+                <span>Genre:</span> {movie.genre}
+              </p>
+              <p>
+                <span>Rating:</span> {movie.rating}/10
+              </p>
+              <p>
+                <span>Year:</span> {movie.releaseYear}
+              </p>
+            </div>
           </Link>
         ))}
       </div>

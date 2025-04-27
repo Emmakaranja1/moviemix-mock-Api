@@ -1,120 +1,207 @@
-.movie-details {
-  max-width: 800px;
+.movie-details-container {
+  max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
-  font-family: "Arial", sans-serif;
+}
+
+.page-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  position: relative;
 }
 
 .back-button {
-  margin-bottom: 20px;
-}
-
-.back-button a {
-  display: inline-block;
-  background-color: #333;
-  color: white;
-  text-decoration: none;
+  background-color: #f0f0f0;
+  border: none;
   padding: 8px 16px;
   border-radius: 4px;
-  transition: background-color 0.3s;
+  font-weight: 600;
+  cursor: pointer;
+  margin-right: 20px;
+  transition: all 0.3s ease;
 }
 
-.back-button a:hover {
-  background-color: #555;
+.back-button:hover {
+  background-color: #e0e0e0;
+  transform: translateY(-2px);
 }
 
-.movie-content {
+.movie-details-content {
+  display: flex;
+  gap: 40px;
   background-color: white;
   border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  padding: 25px;
-  margin-top: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-.movie-header h1 {
-  margin-top: 0;
-  color: #333;
-  font-size: 2rem;
+.movie-poster {
+  flex: 0 0 300px;
+  height: 450px;
+}
+
+.movie-poster img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px 0 0 8px;
+}
+
+.no-poster {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0;
+  color: #999;
+  font-size: 18px;
   text-align: center;
-  margin-bottom: 20px;
+  border-radius: 8px 0 0 8px;
+}
+
+.movie-info-details {
+  flex: 1;
+  padding: 30px;
+}
+
+.movie-title {
+  font-size: 32px;
+  margin: 0 0 20px 0;
+  color: #333;
 }
 
 .movie-meta {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 15px;
-  margin: 25px 0;
-  text-align: center;
+  display: flex;
+  gap: 30px;
+  margin-bottom: 20px;
 }
 
 .meta-item {
-  padding: 10px;
-  background-color: #f8f9fa;
-  border-radius: 6px;
+  flex: 1;
 }
 
-.meta-item span {
+.meta-label {
   display: block;
-  font-weight: bold;
-  color: #555;
+  color: #777;
+  font-size: 14px;
   margin-bottom: 5px;
-  font-size: 0.9rem;
 }
 
-.meta-item p {
-  margin: 0;
-  font-size: 1.1rem;
+.meta-value {
+  font-size: 16px;
+  font-weight: 600;
   color: #333;
+  margin: 0;
 }
 
 .rating-visual {
-  margin: 30px 0 15px;
+  margin-top: 20px;
+  margin-bottom: 30px;
 }
 
 .rating-bar {
-  height: 12px;
-  background-color: #e0e0e0;
-  border-radius: 6px;
+  height: 10px;
+  background-color: #eee;
+  border-radius: 5px;
   overflow: hidden;
   margin-bottom: 5px;
 }
 
 .rating-fill {
   height: 100%;
-  background-color: #4caf50;
-  border-radius: 6px 0 0 6px;
+  background: linear-gradient(to right, #f1c40f, #f39c12);
+  border-radius: 5px;
+  transition: width 0.5s ease-in-out;
 }
 
 .rating-label {
-  text-align: right;
-  margin: 5px 0 0;
-  font-size: 0.9rem;
-  color: #666;
+  font-size: 14px;
+  color: #777;
+  margin: 0;
 }
 
-.loading,
-.error,
-.not-found {
-  text-align: center;
-  padding: 50px;
-  font-size: 1.2rem;
+.movie-description {
+  margin-top: 30px;
 }
 
-.loading {
-  color: #666;
+.movie-description h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #333;
 }
 
-.error {
-  color: #d32f2f;
+.movie-description p {
+  line-height: 1.6;
+  color: #555;
 }
 
-.not-found {
-  color: #999;
+.movie-actions {
+  margin-top: 30px;
+  display: flex;
+  gap: 15px;
 }
 
-/* Responsive Design */
-@media (max-width: 600px) {
+.action-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.add-watchlist {
+  background-color: #3498db;
+  color: white;
+}
+
+.add-watchlist:hover {
+  background-color: #2980b9;
+}
+
+.rate-movie {
+  background-color: #f1c40f;
+  color: #333;
+}
+
+.rate-movie:hover {
+  background-color: #f39c12;
+}
+
+.loading-container,
+.error-container,
+.not-found-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+  font-size: 20px;
+  color: #555;
+}
+
+.error-container {
+  color: #e74c3c;
+}
+
+@media (max-width: 768px) {
+  .movie-details-content {
+    flex-direction: column;
+  }
+
+  .movie-poster {
+    flex: auto;
+    height: 350px;
+    width: 100%;
+  }
+
+  .movie-poster img {
+    border-radius: 8px 8px 0 0;
+  }
+
   .movie-meta {
-    grid-template-columns: 1fr;
+    flex-direction: column;
+    gap: 15px;
   }
 }

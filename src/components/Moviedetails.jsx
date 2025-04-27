@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link, useNavigate } from "react-router-dom";
 import "../style/Moviedetails.css";
 
 const Moviedetails = () => {
@@ -7,7 +7,9 @@ const Moviedetails = () => {
   const [movieDetails, setMovieDetails] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const navigate = useNavigate();
 
+  // Fetch movie details
   useEffect(() => {
     const fetchMovieDetails = async () => {
       try {
@@ -28,53 +30,74 @@ const Moviedetails = () => {
   }, [id]);
 
   if (loading) {
-    return <div className="loading">Loading movie details...</div>;
+    return <div className="loading-container">Loading movie details...</div>;
   }
 
   if (error) {
-    return <div className="error">Error: {error.message}</div>;
+    return <div className="error-container">Error: {error.message}</div>;
   }
 
   if (!movieDetails) {
-    return <div className="not-found">Movie not found</div>;
+    return <div className="not-found-container">Movie not found</div>;
   }
 
   return (
-    <div className="movie-details">
-      <div className="back-button">
-        <Link to="/">← Back to Movies</Link>
+    <div className="movie-details-container">
+      <div className="page-header">
+        <button className="back-button" onClick={() => navigate(-1)}>
+          ← Back
+        </button>
+        <h1>Movie Details</h1>
       </div>
 
-      <div className="movie-content">
-        <div className="movie-header">
-          <h1>{movieDetails.title}</h1>
+      <div className="movie-details-content">
+        <div className="movie-poster">
+          {movieDetails.image ? (
+            <img
+              src={movieDetails.image}
+              alt={`${movieDetails.title} poster`}
+            />
+          ) : (
+            <div className="no-poster">No image available</div>
+          )}
+        </div>
+
+        <div className="movie-info-details">
+          <h1 className="movie-title">{movieDetails.title}</h1>
 
           <div className="movie-meta">
             <div className="meta-item">
-              <span>Genre</span>
-              <p>{movieDetails.genre}</p>
+              <span className="meta-label">Genre</span>
+              <p className="meta-value">{movieDetails.genre}</p>
             </div>
 
             <div className="meta-item">
-              <span>Release Year</span>
-              <p>{movieDetails.releaseYear}</p>
+              <span className="meta-label">Release Year</span>
+              <p className="meta-value">{movieDetails.releaseYear}</p>
             </div>
 
             <div className="meta-item">
-              <span>Rating</span>
-              <p>{movieDetails.rating}/10</p>
+              <span className="meta-label">Rating</span>
+              <p className="meta-value">{movieDetails.rating}/10</p>
             </div>
           </div>
-        </div>
 
-        <div className="rating-visual">
-          <div className="rating-bar">
-            <div
-              className="rating-fill"
-              style={{ width: `${(movieDetails.rating / 10) * 100}%` }}
-            ></div>
+          <div className="rating-visual">
+            <div className="rating-bar">
+              <div
+                className="rating-fill"
+                style={{ width: `${(movieDetails.rating / 10) * 100}%` }}
+              ></div>
+            </div>
+            <p className="rating-label">Rating: {movieDetails.rating}/10</p>
           </div>
-          <p className="rating-label">Rating: {movieDetails.rating}/10</p>
+
+          {movieDetails.description && (
+            <div className="movie-description">
+              <h3>Description</h3>
+              <p>{movieDetails.description}</p>
+            </div>
+          )}
         </div>
       </div>
     </div>
