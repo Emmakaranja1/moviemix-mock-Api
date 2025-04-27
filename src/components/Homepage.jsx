@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import "../style/Homepage.css";
 
 const Homepage = () => {
   const [movies, setMovies] = useState([]);
   const [error, setError] = useState(null);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchMovies = async () => {
@@ -16,23 +18,37 @@ const Homepage = () => {
         setMovies(data);
       } catch (error) {
         setError(error);
+      } finally {
+        setLoading(false);
       }
     };
 
     fetchMovies();
-  }, []); // Add empty dependency array to prevent infinite loops
+  }, []);
+
+  if (loading) {
+    return <div className="loading-container">Loading...</div>;
+  }
 
   return (
     <div className="homepage">
       <h1>Movie Mix</h1>
       {error && <p className="error">Error: {error.message}</p>}
+      {movies.length === 0 && !error && <p>No movies available.</p>}
       <div className="movie-list">
         {movies.map((movie) => (
-          <div className="movie-card" key={movie.id}>
+          <Link to={`/movie/${movie.id}`} key={movie.id} className="movie-card">
             <h2>{movie.title}</h2>
-            <p>Director: {movie.director}</p>
-            <p>Year: {movie.year}</p>
-          </div>
+            <p>
+              <span>Genre:</span> {movie.genre}
+            </p>
+            <p>
+              <span>Rating:</span> {movie.rating}/10
+            </p>
+            <p>
+              <span>Year:</span> {movie.releaseYear}
+            </p>
+          </Link>
         ))}
       </div>
     </div>

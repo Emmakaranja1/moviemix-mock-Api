@@ -8,16 +8,26 @@
 .homepage h1 {
   text-align: center;
   color: #e50914;
-  font-size: 3rem;
+  font-size: 2.5rem;
   margin-bottom: 30px;
+}
+
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+  font-size: 1.5rem;
+  color: #555;
 }
 
 .error {
   background-color: #ffebee;
   color: #c62828;
-  padding: 10px;
+  padding: 10px 15px;
   border-radius: 4px;
   margin-bottom: 20px;
+  text-align: center;
 }
 
 .movie-list {
@@ -27,11 +37,15 @@
 }
 
 .movie-card {
-  background-color: #f8f9fa;
+  background-color: white;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  transition: transform 0.3s ease;
+  padding: 15px;
+  text-decoration: none;
+  color: #333;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: block;
 }
 
 .movie-card:hover {
@@ -40,14 +54,22 @@
 }
 
 .movie-card h2 {
-  font-size: 1.5rem;
-  margin: 12px;
+  font-size: 1.2rem;
+  margin: 0 0 12px 0;
   color: #333;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 8px;
 }
 
 .movie-card p {
-  margin: 8px 12px;
+  margin: 8px 0;
   color: #666;
+  font-size: 0.9rem;
+}
+
+.movie-card span {
+  font-weight: bold;
+  color: #444;
 }
 
 /* Add responsiveness */
