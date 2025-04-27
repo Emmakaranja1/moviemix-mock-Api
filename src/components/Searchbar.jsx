@@ -1,9 +1,14 @@
 import React from 'react'
-
-const Searchbar = () => {
+import {useState} from 'react';
+function Searchbar ()  {
     const [search, setSearch] = React.useState('');
-    const handleSearch =() =>{
-        console.log(search);
+    const handleInputChange =(e) =>{
+        setSearch(e.target.value);
+    }
+    const handleSearch = () => {
+        // Perform search logic here
+        console.log('Searching for:', search);
+        //add api call here
     }
   return (
     <div className="search-bar">
@@ -11,7 +16,8 @@ const Searchbar = () => {
             type="text" 
             placeholder="Search" 
             value={search} 
-            onChange={(e) => setSearch(e.target.value)} 
+            onChange={handleInputChange}
+            style={{width: '300px', padding: '10px', borderRadius: '5px', border: '1px solid #ccc'}}
         />
         <button onClick={handleSearch}>Search</button>
     </div>

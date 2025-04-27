@@ -4,8 +4,9 @@ import Logo_icon from '../../assets/Logo-icon.png';
 import Watchlist_icon from '../../assets/Watchlist-icon.png';
 import Search_icon from '../../assets/Search-icon.png';
 import Rating_icon from '../../assets/Rating-icon.png';
-
+import searchbar from '../Searchbar.jsx';
 import './Navbar.css';
+import Searchbar from '../Searchbar.jsx';
 
 function Navbar() {
   return (
@@ -16,7 +17,7 @@ function Navbar() {
 
       <ul className="nav-links">
         <li>
-          <Link to="/Homepage">
+          <Link to="/">
             <img src={Home_icon} alt="Home Icon" />
             <span>Home</span>
           </Link>
@@ -36,12 +37,14 @@ function Navbar() {
       </ul>
 
       <div className="search-bar">
-        <input type="text" placeholder="Search" />
-        <img src={Search_icon} alt="Search Icon" />
+        
+        <Searchbar/>
+        
       </div>
 
       <div className="auth-links">
         <Link to="/login" className="btn">Login</Link>
+<hr/>
         <Link to="/signup" className="btn">Sign Up</Link>
       </div>
     </nav>

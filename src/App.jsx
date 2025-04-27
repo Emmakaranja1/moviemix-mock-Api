@@ -25,9 +25,10 @@ function App() {
         <Routes>
           
           <Route path="/login" element={<Login />} />
+          
           <Route path="/signup" element={<Signup />} />
-          <Route path="/Homepage" element={<Homepage />} />
           <Route path="/search" element={<Searchbar />} />
+          <Route path="/" element={<Homepage />} />
           <Route path="/watchlist" element={<Watchlist />} />
           <Route path="/rating" element={<Rating />} />
         </Routes>
