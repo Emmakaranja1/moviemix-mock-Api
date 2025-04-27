@@ -1,14 +1,14 @@
-
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 import Profile from './Profile.jsx';
 import Login from './Login.jsx';
 import Signup from './Signup.jsx';
 import Navbar from './components/Navbar/Navbar.jsx';
-import Homepage from './components/Homepage.jsx';
-import Searchbar from './components/Searchbar.jsx';
+import Homepage from './components/Navbar/Homepage.jsx';
+import Searchbar from './components/Navbar/Searchbar.jsx';
 import Watchlist from './components/Navbar/Watchlist.jsx';
 import Rating from './components/Navbar/Rating.jsx';
+
 
 
 function App() {

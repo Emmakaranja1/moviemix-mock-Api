@@ -1,14 +1,14 @@
 import React from 'react'
 import {useState} from 'react';
 function Searchbar ()  {
-    const [search, setSearch] = React.useState('');
+    const [search, setSearch] = useState('');
     const handleInputChange =(e) =>{
         setSearch(e.target.value);
     }
     const handleSearch = () => {
         // Perform search logic here
         console.log('Searching for:', search);
-        //add api call here
+        // add api call here
     }
   return (
     <div className="search-bar">

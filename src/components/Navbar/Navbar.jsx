@@ -2,11 +2,11 @@ import { Link } from 'react-router-dom';
 import Home_icon from '../../assets/Home-icon.png';
 import Logo_icon from '../../assets/Logo-icon.png';
 import Watchlist_icon from '../../assets/Watchlist-icon.png';
-import Search_icon from '../../assets/Search-icon.png';
+
 import Rating_icon from '../../assets/Rating-icon.png';
-import searchbar from '../Searchbar.jsx';
+
 import './Navbar.css';
-import Searchbar from '../Searchbar.jsx';
+import Searchbar from './Searchbar.jsx';
 
 function Navbar() {
   return (
