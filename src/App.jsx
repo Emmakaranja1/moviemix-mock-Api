@@ -1,9 +1,14 @@
 
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import './App.css'
-import Profile from './Profile.jsx'
-import Login from './Login.jsx'
-import Signup from './Signup.jsx'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import './App.css';
+
+import Login from './Login.jsx';
+import Signup from './Signup.jsx';
+import Navbar from './components/Navbar/Navbar.jsx';
+import Homepage from './components/Homepage.jsx';
+import Searchbar from './components/Searchbar.jsx';
+import Watchlist from './components/Navbar/Watchlist.jsx';
+import Rating from './components/Navbar/Rating.jsx';
 
 function App() {
   const appStyle = {
@@ -18,10 +23,13 @@ function App() {
         <Navbar />
         <h1>Welcome to Movie Mix</h1>
         <Routes>
-          <Route path="/" element={<Profile />} />
+          
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/Homepage" element={<Homepage />} />
+          <Route path="/search" element={<Searchbar />} />
+          <Route path="/watchlist" element={<Watchlist />} />
+          <Route path="/rating" element={<Rating />} />
         </Routes>
       </div>
     </Router>
