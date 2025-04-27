@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import './App.css'
 import Profile from './Profile.jsx'
@@ -10,6 +11,15 @@ import Watchlist from './components/Watchlist';
 import RatedFiveStars from './components/RatedFiveStars';
 
 
+=======
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import "./App.css";
+import Profile from "./Profile.jsx";
+import Login from "./Login.jsx";
+import Signup from "./Signup.jsx";
+import Homepage from "./components/Homepage.jsx";
+import Navbar from "./components/Navbar.jsx";
+>>>>>>> e739e14cbc03a753227f72fd35c610ecd89a17d1
 
 function App() {
   const appStyle = {
