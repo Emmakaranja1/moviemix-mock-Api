@@ -237,6 +237,15 @@
       "email": "john@example.com"
     }
   ],
-  "watchlist": [],
+  "watchlist": [
+    {
+      "id": "38",
+      "title": "The Menu",
+      "genre": "Thriller",
+      "releaseYear": "2022",
+      "image": "https://image.tmdb.org/t/p/w500/fPtUgMcLIboqlTlPrq0bQpKK8eq.jpg",
+      "rating": 5
+    }
+  ],
   "ratedFiveStars": []
 }
