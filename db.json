@@ -5,6 +5,7 @@
       "title": "Inception",
       "genre": "Thriller",
       "releaseYear": "2010",
+
       "image": "https://image.tmdb.org/t/p/w500/9gk7adHYeDvHkCSEqAvQNLV5Uge.jpg",
       "rating": 5
     },
@@ -262,6 +263,7 @@
       "genre": "Mystery",
       "releaseYear": "2022",
       "image": "https://image.tmdb.org/t/p/w500/vDGr1YdrlfbU9wxTOdpf3zChmv9.jpg",
+
       "rating": 5
     }
   ],
@@ -279,6 +281,7 @@
   ],
   "watchlist": [
     {
+
       "id": "37",
       "title": "Nope",
       "genre": "Horror",
@@ -288,4 +291,5 @@
     }
   ],
   "ratedFiveStars": []
+
 }

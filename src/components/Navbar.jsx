@@ -48,8 +48,14 @@ function Navbar() {
             <span>Rated 5 Stars</span>
           </Link>
         </li>
-      </ul>
+      <li>
+      
+        <Link to="/displaysearch">
+        <span>Display search</span>
+        </Link>
+        </li>
 
+        </ul>
       <div className="search-bar">
         <Searchbar />
       </div>
