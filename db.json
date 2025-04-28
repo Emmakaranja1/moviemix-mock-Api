@@ -279,48 +279,13 @@
   ],
   "watchlist": [
     {
-      "id": "2da5",
-      "title": "Coco",
-      "genre": "Animation",
-      "releaseYear": "2024",
-      "image": "https://image.tmdb.org/t/p/w500/gGEsBPAijhVUFoiNpgZXqRVWJt2.jpg"
-    },
-    {
-      "id": "1",
-      "title": "Inception",
-      "genre": "Thriller",
-      "releaseYear": "2010",
-      "image": "https://image.tmdb.org/t/p/w500/9gk7adHYeDvHkCSEqAvQNLV5Uge.jpg",
+      "id": "37",
+      "title": "Nope",
+      "genre": "Horror",
+      "releaseYear": "2022",
+      "image": "https://image.tmdb.org/t/p/w500/AcKVlWaNVVVFQwro3nLXqPljcYA.jpg",
       "rating": 5
     }
   ],
-  "ratedFiveStars": [
-    {
-      "id": "39",
-      "title": "The Banshees of Inisherin",
-      "genre": "Drama",
-      "releaseYear": "2022",
-      "image": "https://image.tmdb.org/t/p/w500/4yFG6cSPaCaPhyJ1vtGOtMD1lgh.jpg",
-      "rating": 5,
-      "userRating": 5
-    },
-    {
-      "id": "39",
-      "title": "The Banshees of Inisherin",
-      "genre": "Drama",
-      "releaseYear": "2022",
-      "image": "https://image.tmdb.org/t/p/w500/4yFG6cSPaCaPhyJ1vtGOtMD1lgh.jpg",
-      "rating": 5,
-      "userRating": 5
-    },
-    {
-      "id": "40",
-      "title": "Glass Onion: A Knives Out Mystery",
-      "genre": "Mystery",
-      "releaseYear": "2022",
-      "image": "https://image.tmdb.org/t/p/w500/vDGr1YdrlfbU9wxTOdpf3zChmv9.jpg",
-      "rating": 5,
-      "userRating": 5
-    }
-  ]
+  "ratedFiveStars": []
 }

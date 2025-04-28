@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import "../style/Watchlist.css";
 
 const Watchlist = () => {
@@ -25,7 +26,6 @@ const Watchlist = () => {
     fetchWatchlist();
   }, []);
 
-  // Function to remove a movie from the watchlist
   const removeFromWatchlist = async (movieId) => {
     try {
       await fetch(`http://localhost:3001/watchlist/${movieId}`, {
@@ -45,23 +45,34 @@ const Watchlist = () => {
     return <div className="error-container">Error: {error}</div>;
   }
 
-  main;
   return (
-    <div className="watchlist">
+    <div className="watchlist-page">
       <h1>My Watchlist</h1>
       {watchlist.length === 0 ? (
-        <p>Your watchlist is empty.</p>
+        <div className="empty-watchlist">
+          <p>Your watchlist is empty.</p>
+          <p>Add movies to your watchlist to watch later!</p>
+          <Link to="/all-movies" className="browse-button">
+            Browse Movies
+          </Link>
+        </div>
       ) : (
         <div className="movie-list">
           {watchlist.map((movie) => (
             <div key={movie.id} className="movie-card">
               <div className="movie-image">
                 <img src={movie.image} alt={movie.title} />
+                <div className="overlay">
+                  <Link to={`/movie/${movie.id}`} className="view-button">
+                    View Details
+                  </Link>
+                </div>
               </div>
               <div className="movie-info">
                 <h2>{movie.title}</h2>
-                <p>Genre: {movie.genre}</p>
-                <p>Year: {movie.releaseYear}</p>
+                <p>
+                  {movie.genre} • {movie.releaseYear}
+                </p>
                 <button
                   className="remove-button"
                   onClick={() => removeFromWatchlist(movie.id)}
