@@ -1,3 +1,4 @@
+
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { useState } from 'react'; 
 import './App.css';
@@ -13,6 +14,7 @@ import RatedFiveStars from './components/RatedFiveStars.jsx';
 import DisplaySearch from './components/DisplaySearch.jsx'; 
 
 
+
 function App() {
   const [selectedMovie, setSelectedMovie] = useState(null);
 
@@ -23,6 +25,7 @@ function App() {
         
         
         <Routes>
+
           <Route path="/profile" element={<Profile />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
@@ -31,6 +34,7 @@ function App() {
           <Route path="/all-movies" element={<AllMovies />} />
           <Route path="/watchlist" element={<Watchlist />} />
           <Route path="/rated-5-stars" element={<RatedFiveStars />} />
+
         </Routes>
       </div>
     </Router>
