@@ -8,7 +8,7 @@ import Homepage from "./components/Homepage.jsx";
 import AllMovies from "./components/AllMovies";
 import Watchlist from "./components/Watchlist";
 import RatedFiveStars from "./components/RatedFiveStars";
-import Moviedetails from "./components/Moviedetails"; // Make sure to import this
+import Moviedetails from "./components/Moviedetails";
 
 function App() {
   return (
@@ -24,7 +24,6 @@ function App() {
           <Route path="/all-movies" element={<AllMovies />} />
           <Route path="/watchlist" element={<Watchlist />} />
           <Route path="/rated-5-stars" element={<RatedFiveStars />} />
-          {/* Add this route for movie details */}
           <Route path="/movie/:id" element={<Moviedetails />} />
         </Routes>
       </div>

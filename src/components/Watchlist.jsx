@@ -45,6 +45,7 @@ const Watchlist = () => {
     return <div className="error-container">Error: {error}</div>;
   }
 
+  main;
   return (
     <div className="watchlist">
       <h1>My Watchlist</h1>

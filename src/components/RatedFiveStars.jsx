@@ -10,6 +10,9 @@ const RatedFiveStars = () => {
     const fetchRatedMovies = async () => {
       try {
         const response = await fetch("http://localhost:3001/ratedFiveStars"); // Fetch rated movies from backend
+
+        // Fetch movies with a rating of 5 stars from db.json
+
         if (!response.ok) {
           throw new Error("Failed to fetch rated movies");
         }
@@ -27,6 +30,7 @@ const RatedFiveStars = () => {
 
   if (loading) return <div className="loading-container">Loading...</div>;
   if (error) return <div className="error-container">Error: {error}</div>;
+  ain;
 
   return (
     <div className="rated-five-stars">

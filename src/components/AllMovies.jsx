@@ -29,9 +29,7 @@ const AllMovies = () => {
 
   // Add a movie to the watchlist
   const addToWatchlist = (movie) => {
-    if (!watchlist.some((item) => item.id === movie.id)) {
-      setWatchlist([...watchlist, movie]);
-    }
+    setWatchlist([...watchlist, movie]);
   };
 
   // Rate a movie and send it to the rated movies list
@@ -49,38 +47,7 @@ const AllMovies = () => {
     }
   };
 
-  if (loading) {
-    return <div className="loading-container">Loading...</div>;
-  }
-
-  return (
-    <div className="all-movies">
-      <h1>All Movies</h1>
-      {error && <p className="error">Error: {error.message}</p>}
-      <div className="movie-list">
-        {movies.map((movie) => (
-          <div key={movie.id} className="movie-card">
-            <div className="movie-image">
-              <img src={movie.image} alt={movie.title} />
-            </div>
-            <div className="movie-info">
-              <h2>{movie.title}</h2>
-              <button onClick={() => addToWatchlist(movie)}>
-                Add to Watchlist
-              </button>
-              <div className="rating-buttons">
-                {[1, 2, 3, 4, 5].map((rating) => (
-                  <button key={rating} onClick={() => rateMovie(movie, rating)}>
-                    {rating} ★
-                  </button>
-                ))}
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
-    </div>
-  );
+  // Removed duplicate rateMovie function declaration
 };
 
 export default AllMovies;
