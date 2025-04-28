@@ -1,4 +1,5 @@
 
+
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import './App.css'
 import Profile from './Profile.jsx'
@@ -14,21 +15,17 @@ import RatedFiveStars from './components/RatedFiveStars';
 
 
 
-function App() {
-  const appStyle = {
-    position: "relative",
-    minHeight: "100vh",
-    padding: "2rem",
-  };
 
+function App() {
   return (
     <Router>
-      <div style={appStyle}>
+      <div className="app-container">
         <Navbar />
-        <h1>Welcome to Movie Mix</h1>
         <Routes>
 
+
           
+
 
           <Route path="/profile" element={<Profile />} />
 
@@ -37,7 +34,9 @@ function App() {
           <Route path="/signup" element={<Signup />} />
 
 
+
           <Route path="/homepage" element={<Homepage />} />
+
           <Route path="/all-movies" element={<AllMovies />} />
           <Route path="/watchlist" element={<Watchlist />} />
           <Route path="/rated-5-stars" element={<RatedFiveStars />} />
