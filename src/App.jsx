@@ -1,4 +1,10 @@
-import { BrowserRouter as Router, Routes, Route, useNavigate, Navigate } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useNavigate,
+  Navigate,
+} from "react-router-dom";
 import { useEffect } from "react";
 import "./App.css";
 import Profile from "./Profile.jsx";
@@ -28,10 +34,13 @@ function AuthRedirect() {
 
 function PrivateRoute({ children }) {
   const savedAccount = localStorage.getItem("account");
-  if (!savedAccount) {
-    // Redirect to signup if no account saved
-    return <Navigate to="/signup" replace />;
+  const isLoggedIn = localStorage.getItem("isLoggedIn");
+
+  if (!savedAccount || isLoggedIn !== "true") {
+    // Redirect to login if not logged in
+    return <Navigate to="/login" replace />;
   }
+
   return children;
 }
 
