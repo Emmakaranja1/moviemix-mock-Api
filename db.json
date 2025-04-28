@@ -17,14 +17,6 @@
       "rating": 5
     },
     {
-      "id": "10",
-      "title": "The Hunger Games: The Ballad of Songbirds and Snakes",
-      "genre": "Adventure",
-      "releaseYear": "2023",
-      "image": "https://image.tmdb.org/t/p/w500/mBaXZ95R2OxueZhvQbcEWy2DqpS.jpg",
-      "rating": 5
-    },
-    {
       "id": "11",
       "title": "Wonka",
       "genre": "Fantasy",
@@ -113,14 +105,6 @@
       "rating": 5
     },
     {
-      "id": "22",
-      "title": "Wish",
-      "genre": "Animation",
-      "releaseYear": "2023",
-      "image": "https://image.tmdb.org/t/p/w500/8QtDhh8mnGUEyrJsHrQjVIjk8qn.jpg",
-      "rating": 5
-    },
-    {
       "id": "23",
       "title": "Napoleon",
       "genre": "Drama",
@@ -169,22 +153,6 @@
       "rating": 5
     },
     {
-      "id": "29",
-      "title": "Indiana Jones and the Dial of Destiny",
-      "genre": "Adventure",
-      "releaseYear": "2023",
-      "image": "https://image.tmdb.org/t/p/w500/Af4bXE63pVsb2FtbW8tYYxSPfpj.jpg",
-      "rating": 5
-    },
-    {
-      "id": "30",
-      "title": "The Iron Claw",
-      "genre": "Drama",
-      "releaseYear": "2023",
-      "image": "https://image.tmdb.org/t/p/w500/kKNQbelMuCv2YqNIioQI1IBtJoI.jpg",
-      "rating": 5
-    },
-    {
       "id": "31",
       "title": "Shazam! Fury of the Gods",
       "genre": "Superhero",
@@ -198,14 +166,6 @@
       "genre": "Drama",
       "releaseYear": "2023",
       "image": "https://image.tmdb.org/t/p/w500/cvsXj3I9Q2iyyIo95AecSd1tad7.jpg",
-      "rating": 5
-    },
-    {
-      "id": "33",
-      "title": "The Whale",
-      "genre": "Drama",
-      "releaseYear": "2022",
-      "image": "https://image.tmdb.org/t/p/w500/keWxYhIBV6k2xQX8r9Xkz0jU289.jpg",
       "rating": 5
     },
     {
@@ -277,15 +237,6 @@
       "email": "john@example.com"
     }
   ],
-  "watchlist": [
-    {
-      "id": "37",
-      "title": "Nope",
-      "genre": "Horror",
-      "releaseYear": "2022",
-      "image": "https://image.tmdb.org/t/p/w500/AcKVlWaNVVVFQwro3nLXqPljcYA.jpg",
-      "rating": 5
-    }
-  ],
+  "watchlist": [],
   "ratedFiveStars": []
 }
